@@ -278,6 +278,7 @@ className="hero-button"
 type="button"
 onClick={() => router.push("/register")}
 >
+  <br/>
 <span className="decbtn">
 REGISTRATION OPPENING SOON 
 </span>

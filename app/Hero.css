@@ -50,7 +50,7 @@
   z-index: 3;
   margin: 0;
   padding-top: 150px;
-  /* font-size: clamp(5rem, 5vw, 8rem); */
+  font-size: clamp(5rem, 5vw, 8rem);
   letter-spacing: 0.10em;
   text-transform: uppercase;
   font-weight: 600;
