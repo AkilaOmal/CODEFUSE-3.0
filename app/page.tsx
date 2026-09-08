@@ -5,21 +5,18 @@ import Hero from "./components/Hero";
 import PastWinners from "./components/PastWinners";
 import Roadmap from "./components/Roadmap";
 import Team from "./components/Team";
-import Akila from "./components/Hero";
+import { createElement } from "react";
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-black text-white relative">
-      
-      <Hero/>
-      <CodingBackground />
-      {/* <Hero /> */}
-      <About />
-      <Roadmap />
-      <Guidelines />
-      <PastWinners />
-      <Team />
-      
-    </main>
+  return createElement(
+    "main",
+    { className: "min-h-screen bg-black text-white relative" },
+    createElement(Hero),
+    createElement(CodingBackground),
+    createElement(About),
+    createElement(Roadmap),
+    createElement(Guidelines),
+    createElement(PastWinners),
+    createElement(Team),
   );
 }
