@@ -1,0 +1,21 @@
+{
+  "name": "CODEFUSE 2.0",
+  "short_name": "CODEFUSE",
+  "description": "Unleash the Power of Code - Ultimate Hackathon Experience",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#9333ea",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
