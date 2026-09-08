@@ -6,14 +6,14 @@ import "./globals.css";
 const oxanium = Oxanium({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "CODEFUSE 2.0 - Unleash the Power of Code",
+  title: "CODEFUSE 3.0",
   description:
-    "Join CODEFUSE 2.0, the ultimate hackathon experience. Unleash the power of code and compete with the best developers.",
+    "Join CODEFUSE 3.0, the ultimate hackathon experience. Unleash the power of code and compete with the best developers.",
   keywords: "hackathon, coding, programming, competition, CODEFUSE",
   authors: [{ name: "CODEFUSE Team" }],
   openGraph: {
-    title: "CODEFUSE 2.0 - Unleash the Power of Code",
-    description: "Join CODEFUSE 2.0, the ultimate hackathon experience.",
+    title: "CODEFUSE 3.0 - Unleash the Power of Code",
+    description: "Join CODEFUSE 3.0, the ultimate hackathon experience.",
     type: "website",
   },
   generator: "v0.dev",
