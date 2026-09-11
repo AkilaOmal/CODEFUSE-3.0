@@ -46,7 +46,7 @@
 .hero-title {
   width: 100%;
   max-width: 90vw;
-  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-size: clamp(2rem, 7vw, 5rem);
   position: relative;
   z-index: 3;
   margin: 0;
