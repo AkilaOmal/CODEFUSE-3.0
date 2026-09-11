@@ -71,7 +71,7 @@ export default function PastWinners() {
             {/* 1st Place Team Heading */}
             <div className="text-center">
               <h3 className="text-xl font-semibold text-purple-300 mb-4">
-                🥇 1st Place - Team Xterminators
+                 1st Place - Team Xterminators (CODEFUSE 1.0)
               </h3>
             </div>
 
@@ -130,13 +130,13 @@ export default function PastWinners() {
                 className="w-full rounded-lg mb-2"
               />
               <h3 className="text-2xl font-bold mb-4 text-center">
-                CODEFUSE 1.0
+                CODEFUSE 2.0
               </h3>
               <p className="text-gray-300 text-center">
-                Our inaugural edition brought together 40+ participants,
+                Our CODEFUSE 2.0 edition brought together 100+ participants,
                 including both solo coders and teams. It marked the beginning of
                 a vibrant culture of coding, creativity, and friendly
-                competition. Join us as CODEFUSE 2.0 continues the journey of
+                competition. Join us as CODEFUSE 3.0 continues the journey of
                 innovation and excellence!
               </p>
             </div>

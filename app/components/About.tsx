@@ -67,7 +67,7 @@ export default function About() {
             </h2>
 
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0" style={{ textAlign: 'justify' }}>
-              CODEFUSE 2.0 is a premier online hackathon and intra-faculty
+              CODEFUSE 3.0 is a premier online hackathon and intra-faculty
               coding competition, hosted on the HackerRank platform, exclusively
               for students of the Faculty of Computing, University of Sri
               Jayewardenepura. Designed to ignite innovation and empower the

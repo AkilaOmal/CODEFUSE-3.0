@@ -19,7 +19,6 @@ export default function Home() {
     //   <Team />
     // </main>
     <main className="relative min-h-screen bg-[#07010d]">
-       
       <Hero />
       <div className="relative">
       <CodingBackground />
