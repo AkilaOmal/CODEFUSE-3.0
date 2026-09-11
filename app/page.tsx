@@ -19,17 +19,15 @@ export default function Home() {
     //   <Team />
     // </main>
     <main className="relative min-h-screen bg-[#07010d]">
-      {/* 1. HERO SECTION (මෙහි Background එක Display නොවේ) */}
+       
       <Hero />
-
-      {/* 2. HERO එකෙන් පසු එන SECTIONS (මෙහි Background එක Display වේ) */}
       <div className="relative">
-        <CodingBackground />
-        <About />
-       <Roadmap />
-       <Guidelines />
+      <CodingBackground />
+      <About />
+      <Roadmap />
+      <Guidelines />
       <PastWinners />
-        <Team />
+      <Team />
       </div>
     </main>
   );
