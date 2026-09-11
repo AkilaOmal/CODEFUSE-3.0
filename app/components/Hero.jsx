@@ -8,7 +8,7 @@ import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 
 import "../Hero.css";
-
+//import CyberBackground from "./CyberBackground";
 // Register GSAP plugins
 gsap.registerPlugin(
 ScrollTrigger,

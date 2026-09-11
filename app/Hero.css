@@ -45,7 +45,7 @@
 .hero-title {
   width: 100%;
   max-width: 90vw;
-  font-size: 8vw;
+  /* font-size: 8vw; */
   position: relative;
   z-index: 3;
   margin: 0;
@@ -78,6 +78,7 @@
   }
 }
 .hero-subtitle {
+  text-align: center;
   font-weight: 200;
   margin: 18px 0 0;
   font-size: clamp(0.8rem, 1.5vw, 1.5rem);
@@ -100,7 +101,8 @@
   transition: all 0.3s ease;
 }
 .decbtn{
-  color: rgb(255, 255, 255);
+  text-align: center;
+  /* color: rgb(255, 255, 255); */
   text-shadow: 0 0 10px rgb(209, 20, 226), 0 0 20px rgba(206, 5, 247, 0.986) ;
 }
 .hero-button:hover {
@@ -143,7 +145,7 @@
   animation: scrollGlow 1.8s ease-in-out infinite;
 }
 
-@keyframes scrollGlow {
+/* @keyframes scrollGlow {
   0% {
     transform: translateY(-100%);
     opacity: 0;
@@ -155,4 +157,4 @@
     transform: translateY(260%);
     opacity: 0;
   }
-}
+} */
