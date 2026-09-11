@@ -246,7 +246,7 @@ src="/robo.mp4"
 muted
 
 playsInline
-
+autoPlay
 preload="auto"
 />
 
