@@ -34,7 +34,6 @@ if (!video) return;
 let seekFrame = null;
 let pendingProgress = 0;
 let lastTime = -1;
-let desktopEndHandler = null;
 
 
 // ==========================================
@@ -58,18 +57,14 @@ video.muted = true;
 const isDesktop = window.matchMedia("(min-width: 769px)").matches;
 
 if (isDesktop) {
-  desktopEndHandler = () => {
-    video.pause();
-    video.currentTime = duration;
-  };
-
-  video.addEventListener("ended", desktopEndHandler);
+  video.loop = true;
   video.play().catch(() => {});
 
   return;
 }
 
 video.pause();
+video.loop = false;
 
 
 // Connect video progress with scroll
@@ -245,13 +240,10 @@ video.removeEventListener(
 createVideoAnimation
 );
 
-if (desktopEndHandler) {
-  video.removeEventListener("ended", desktopEndHandler);
-}
-
 splitTitle.revert();
 
 video.pause();
+video.loop = false;
 
 if (seekFrame !== null) {
 cancelAnimationFrame(seekFrame);
