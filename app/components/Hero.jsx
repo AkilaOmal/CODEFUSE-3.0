@@ -31,6 +31,11 @@ const video = videoRef.current;
 
 if (!video) return;
 
+let seekFrame = null;
+let pendingProgress = 0;
+let lastTime = -1;
+let desktopEndHandler = null;
+
 
 // ==========================================
 // VIDEO SCROLL ANIMATION
@@ -48,18 +53,27 @@ return;
 // Start video from beginning
 video.currentTime = 0;
 
-// Don't autoplay
+video.muted = true;
+
+const isDesktop = window.matchMedia("(min-width: 769px)").matches;
+
+if (isDesktop) {
+  desktopEndHandler = () => {
+    video.pause();
+    video.currentTime = duration;
+  };
+
+  video.addEventListener("ended", desktopEndHandler);
+  video.play().catch(() => {});
+
+  return;
+}
+
 video.pause();
 
 
 // Connect video progress with scroll
-gsap.to(video, {
-
-currentTime: duration,
-
-ease: "none",
-
-scrollTrigger: {
+ScrollTrigger.create({
 
 trigger: heroRef.current,
 
@@ -69,7 +83,7 @@ start: "top top",
 end: "+=3000",
 
 // Video follows scroll
-scrub: true,
+scrub: 1,
 
 // Keep hero fixed while scrolling
 pin: true,
@@ -77,7 +91,23 @@ pin: true,
 anticipatePin: 1,
 
 invalidateOnRefresh: true,
-}
+
+onUpdate: (self) => {
+pendingProgress = self.progress;
+
+if (seekFrame !== null) return;
+
+seekFrame = requestAnimationFrame(() => {
+  const nextTime = duration * pendingProgress;
+
+  if (Math.abs(nextTime - lastTime) > 0.01) {
+    video.currentTime = nextTime;
+    lastTime = nextTime;
+  }
+
+  seekFrame = null;
+});
+},
 
 });
 
@@ -215,7 +245,17 @@ video.removeEventListener(
 createVideoAnimation
 );
 
+if (desktopEndHandler) {
+  video.removeEventListener("ended", desktopEndHandler);
+}
+
 splitTitle.revert();
+
+video.pause();
+
+if (seekFrame !== null) {
+cancelAnimationFrame(seekFrame);
+}
 
 };
 
@@ -246,7 +286,6 @@ src="/robo.mp4"
 muted
 
 playsInline
-autoPlay
 preload="auto"
 />
 
