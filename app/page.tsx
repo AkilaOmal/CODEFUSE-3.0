@@ -1,11 +1,13 @@
 // @ts-nocheck
-import About from "./components/About";
-import CodingBackground from "./components/CodingBackground";
-import Guidelines from "./components/Guidelines";
 import Hero from "./components/Hero";
-import PastWinners from "./components/PastWinners";
-import Roadmap from "./components/Roadmap";
-import Team from "./components/Team";
+import dynamic from "next/dynamic";
+
+const CodingBackground = dynamic(() => import("./components/CodingBackground"));
+const About = dynamic(() => import("./components/About"));
+const Roadmap = dynamic(() => import("./components/Roadmap"));
+const Guidelines = dynamic(() => import("./components/Guidelines"));
+const PastWinners = dynamic(() => import("./components/PastWinners"));
+const Team = dynamic(() => import("./components/Team"));
 
 export default function Home() {
   return (
