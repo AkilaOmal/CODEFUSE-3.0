@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Oxanium } from "next/font/google";
 import type React from "react";
 import "./globals.css";
+import SpiderBackground from "./components/SpiderBackground";
 
 const oxanium = Oxanium({ subsets: ["latin"], display: "swap" });
 
@@ -35,7 +36,10 @@ export default function RootLayout({
           content="kerT7R9DCV0ireoAGXcJxjvTEJht64pLw3dnT4meEfk"
         />
       </head>
-      <body className={oxanium.className}>{children}</body>
+      <body className={oxanium.className}>
+        <SpiderBackground />
+        {children}
+      </body>
     </html>
   );
 }

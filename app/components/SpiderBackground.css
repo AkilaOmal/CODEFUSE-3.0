@@ -1,0 +1,27 @@
+.spider-background {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(124, 58, 237, 0.1), transparent 28%),
+    radial-gradient(circle at 92% 86%, rgba(168, 85, 247, 0.08), transparent 30%);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .spider-background {
+    opacity: 0.72;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spider-background {
+    opacity: 0.58;
+  }
+}
