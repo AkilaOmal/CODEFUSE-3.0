@@ -217,7 +217,7 @@ src="/robo.mp4"
 muted
 autoPlay
 playsInline
-preload="auto"
+preload="metadata"
 />
 
 

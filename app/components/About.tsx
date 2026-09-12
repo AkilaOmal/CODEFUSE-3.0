@@ -41,12 +41,11 @@ export default function About() {
           {/* Image Container */}
           <div className="relative animate-on-scroll mx-auto lg:mx-0 w-full max-w-md sm:max-w-lg lg:max-w-none">
             <Image
-              src="/main_flyer.png?height=400&width=400"
+              src="/main_flyer.png"
               alt="Futuristic Tech"
               width={400}
               height={400}
               className="rounded-lg relative z-10"
-              priority
             />
             {/* Soft gradient overlay but placed behind image */}
             <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600/20 to-transparent z-0"></div>

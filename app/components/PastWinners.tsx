@@ -7,17 +7,17 @@ const winners = [
   {
     name: "Heshani Maddage",
     project: "Team Xterminators",
-    image: "/1team01.jpg?height=200&width=200",
+    image: "/1team01.jpg",
   },
   {
     name: "Vidusahan Perera",
     project: "Team Xterminators",
-    image: "/1team02.jpg?height=200&width=200",
+    image: "/1team02.jpg",
   },
   {
     name: "Methuli Mewanya",
     project: "Team Xterminators",
-    image: "/1team03.jpg?height=200&width=200",
+    image: "/1team03.jpg",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function PastWinners() {
           <div className="relative animate-on-scroll">
             <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/20 rounded-lg p-8">
               <Image
-                src="/winners.png?height=260&width=400"
+                src="/winners.png"
                 alt="CODEFUSE 1.0 Event Poster"
                 width={400}
                 height={260}

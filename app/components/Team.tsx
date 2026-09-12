@@ -10,35 +10,35 @@ const teamMembers = [
   {
     name: "Tharindu Thilakarathna",
     role: "Chair-Person",
-    image: "/chair.png?height=200&width=200",
+    image: "/chair.png",
     linkedin: "https://www.linkedin.com/in/tharindu-thilakarathna-4217a6304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     github: "https://github.com/Tharindu-X",
   },
   {
     name: "Saranga Samarakoon",
     role: "Quiz Master",
-    image: "/quiz.png?height=200&width=200",
+    image: "/quiz.png",
     linkedin: "https://www.linkedin.com/in/saranga-samarakoon-77791427b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BShkQ6t5QSvaaHIu8zuLwRw%3D%3D",
     github: "https://github.com/AsekaSL",
   },
   {
     name: "Senidu Ravihara",
     role: "Web Master",
-    image: "/webmaster.png?height=200&width=200",
+    image: "/webmaster.png",
     linkedin: "#",
     github: "#",
   },
   {
     name: "Kavishka Venuka",
     role: "Quiz Coordinator",
-    image: "/Qassis1.png?height=200&width=200",
+    image: "/Qassis1.png",
     linkedin: "https://www.linkedin.com/in/kavishka-venuka-de-alwis-31140a27b",
     github: "https://github.com/KavishkaVenuka",
   },
   {
     name: "Nimesha Rathnayke",
     role: "Quiz Coordinator",
-    image: "/Qassis2.png?height=200&width=200",
+    image: "/Qassis2.png",
     linkedin: "https://www.linkedin.com/in/nimesha-rathnayake-b95471344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/Nimesha-Kavindu",
   },
@@ -160,7 +160,7 @@ export default function Team() {
         {/* Call to action */}
         <div className="text-center mt-16 animate-on-scroll">
           <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-4">Ready to Join CODEFUSE 2.0?</h3>
+            <h3 className="text-2xl font-bold mb-4">Ready to Join CODEFUSE 3.0?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Don't miss out on the ultimate hackathon experience. Register now and be part of the coding revolution!
             </p>
