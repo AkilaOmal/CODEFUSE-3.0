@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 
@@ -11,7 +10,6 @@ import "../Hero.css";
 //import CyberBackground from "./CyberBackground";
 // Register GSAP plugins
 gsap.registerPlugin(
-ScrollTrigger,
 SplitText
 );
 
@@ -31,13 +29,8 @@ const video = videoRef.current;
 
 if (!video) return;
 
-let seekFrame = null;
-let pendingProgress = 0;
-let lastTime = -1;
-
-
 // ==========================================
-// VIDEO SCROLL ANIMATION
+// VIDEO AUTOPLAY
 // ==========================================
 
 const createVideoAnimation = () => {
@@ -53,58 +46,8 @@ return;
 video.currentTime = 0;
 
 video.muted = true;
-
-const isDesktop = window.matchMedia("(min-width: 769px)").matches;
-
-if (isDesktop) {
-  video.loop = true;
-  video.play().catch(() => {});
-
-  return;
-}
-
-video.pause();
-video.loop = false;
-
-
-// Connect video progress with scroll
-ScrollTrigger.create({
-
-trigger: heroRef.current,
-
-start: "top top",
-
-// Increase this value = slower video
-end: "+=3000",
-
-// Video follows scroll
-scrub: 1,
-
-// Keep hero fixed while scrolling
-pin: true,
-
-anticipatePin: 1,
-
-invalidateOnRefresh: true,
-
-onUpdate: (self) => {
-pendingProgress = self.progress;
-
-if (seekFrame !== null) return;
-
-seekFrame = requestAnimationFrame(() => {
-  const nextTime = duration * pendingProgress;
-
-  if (Math.abs(nextTime - lastTime) > 0.01) {
-    video.currentTime = nextTime;
-    lastTime = nextTime;
-  }
-
-  seekFrame = null;
-});
-},
-
-});
+video.loop = true;
+video.play().catch(() => {});
 
 };
 
@@ -244,10 +187,6 @@ splitTitle.revert();
 
 video.pause();
 video.loop = false;
-
-if (seekFrame !== null) {
-cancelAnimationFrame(seekFrame);
-}
 
 };
 

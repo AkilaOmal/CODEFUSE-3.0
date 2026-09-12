@@ -114,6 +114,24 @@
   transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-content > br {
+    display: none;
+  }
+
+  .hero-title {
+    padding-top: 0;
+  }
+}
+
 .scroll-indicator {
   position: absolute;
   left: 50%;
